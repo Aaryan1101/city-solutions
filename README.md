@@ -174,12 +174,6 @@ The application and backend foundations are implemented, but a cloned copy is no
 
 The complete account and credential checklist is in [External Services Setup](docs/external_services_setup_guide.md). Deferred Mart enhancements are tracked in [Mart Future Tasks](docs/mart_future_tasks.md).
 
-## Security Notes
-
-- Never commit `.env`, Maps keys, Firebase config/service-account files, signing keystores, payment secrets, or generated databases.
-- Demo credentials and sample data are not suitable for production.
-- Restrict keys by package, SHA fingerprint, API, host, and server IP wherever the provider supports it.
-
 ## Repository Scope
 
 This repository currently targets Android. The backend can be tested locally with SQLite and deployed with MySQL. External services and production credentials are deliberately left to each deployer, so cloning the source does not activate paid APIs or live authentication automatically.
