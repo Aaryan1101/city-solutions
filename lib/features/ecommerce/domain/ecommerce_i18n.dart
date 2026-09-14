@@ -1,0 +1,103 @@
+import 'package:flutter/foundation.dart';
+
+class EcommerceLocaleController {
+  EcommerceLocaleController._();
+
+  static final ValueNotifier<String> locale = ValueNotifier<String>('en');
+}
+
+class EcommerceI18n {
+  static const _strings = <String, Map<String, String>>{
+    'en': {
+      'ecommerce': 'E-Commerce',
+      'my_account': 'My Account',
+      'wallet': 'Wallet',
+      'refunds': 'Refunds',
+      'wishlist': 'Wishlist',
+      'logout': 'Logout',
+      'saved_addresses': 'Saved Addresses',
+      'policies_info': 'Policies & Info',
+      'about_us': 'About Us',
+      'terms_conditions': 'Terms & Conditions',
+      'privacy_policy': 'Privacy Policy',
+      'refund_policy': 'Refund Policy',
+      'shipping_policy': 'Shipping Policy',
+      'support': 'Support',
+      'categories': 'Categories',
+      'brands': 'Brands',
+      'vendors': 'Vendors',
+      'featured_products': 'Featured Products',
+      'flash_deals': 'Flash Deals',
+      'clearance_sale': 'Clearance Sale',
+      'top_rated': 'Top Rated',
+      'best_selling': 'Best Selling',
+      'latest_products': 'Latest Products',
+      'search_results': 'Search Results',
+      'search_groceries': 'Search products...',
+      'orders': 'Orders',
+      'notifications': 'Notifications',
+      'cart': 'Cart',
+      'language': 'Language',
+      'english': 'English',
+      'hindi': 'Hindi',
+      'order_details': 'Order Details',
+      'items': 'Items',
+      'status_history': 'Status History',
+      'checkout': 'Checkout',
+      'payment_method': 'Payment Method',
+      'delivery_details': 'Delivery Details',
+      'description': 'Description',
+      'product_info': 'Product Info',
+      'transactions': 'Transactions',
+      'available_balance': 'Available Balance',
+    },
+    'hi': {
+      'ecommerce': 'ई-कॉमर्स',
+      'my_account': 'मेरा अकाउंट',
+      'wallet': 'वॉलेट',
+      'refunds': 'रिफंड',
+      'wishlist': 'विशलिस्ट',
+      'logout': 'लॉगआउट',
+      'saved_addresses': 'सेव किए गए पते',
+      'policies_info': 'पॉलिसी और जानकारी',
+      'about_us': 'हमारे बारे में',
+      'terms_conditions': 'नियम और शर्तें',
+      'privacy_policy': 'गोपनीयता नीति',
+      'refund_policy': 'रिफंड नीति',
+      'shipping_policy': 'शिपिंग नीति',
+      'support': 'सहायता',
+      'categories': 'श्रेणियां',
+      'brands': 'ब्रांड्स',
+      'vendors': 'विक्रेता',
+      'featured_products': 'फीचर्ड प्रोडक्ट्स',
+      'flash_deals': 'फ्लैश डील्स',
+      'clearance_sale': 'क्लियरेंस सेल',
+      'top_rated': 'टॉप रेटेड',
+      'best_selling': 'बेस्ट सेलिंग',
+      'latest_products': 'लेटेस्ट प्रोडक्ट्स',
+      'search_results': 'खोज परिणाम',
+      'search_groceries': 'प्रोडक्ट खोजें...',
+      'orders': 'ऑर्डर्स',
+      'notifications': 'नोटिफिकेशन्स',
+      'cart': 'कार्ट',
+      'language': 'भाषा',
+      'english': 'अंग्रेज़ी',
+      'hindi': 'हिंदी',
+      'order_details': 'ऑर्डर विवरण',
+      'items': 'आइटम्स',
+      'status_history': 'स्टेटस हिस्ट्री',
+      'checkout': 'चेकआउट',
+      'payment_method': 'पेमेंट मेथड',
+      'delivery_details': 'डिलीवरी विवरण',
+      'description': 'विवरण',
+      'product_info': 'प्रोडक्ट जानकारी',
+      'transactions': 'लेनदेन',
+      'available_balance': 'उपलब्ध बैलेंस',
+    },
+  };
+
+  static String text(String key, [String? locale]) {
+    final code = locale ?? EcommerceLocaleController.locale.value;
+    return _strings[code]?[key] ?? _strings['en']![key] ?? key;
+  }
+}

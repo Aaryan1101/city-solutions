@@ -1,0 +1,24 @@
+<IfModule mod_rewrite.c>
+    RewriteEngine On
+
+    Options -Indexes
+
+    <FilesMatch "^(\.env|\.env\..*|composer\.(json|lock)|README\.md|.*\.(sql|sqlite|db|log|bak|zip|tar|gz))$">
+        Require all denied
+    </FilesMatch>
+
+    RewriteRule ^(app|database|resources|scripts|storage)(/.*)?$ - [F,L]
+
+    # Block only Composer vendor artifacts; keep the /vendor panel routes reachable.
+    RewriteRule ^vendor/(autoload\.php|composer/|bin/) - [F,L]
+
+    # When Hostinger points the domain to this root folder instead of /public,
+    # keep upload URLs stable as /uploads/... while files live in public/uploads.
+    RewriteRule ^uploads/(.*)$ public/uploads/$1 [L]
+
+    RewriteCond %{REQUEST_FILENAME} -f [OR]
+    RewriteCond %{REQUEST_FILENAME} -d
+    RewriteRule ^ - [L]
+
+    RewriteRule ^ index.php [L]
+</IfModule>
