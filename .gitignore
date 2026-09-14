@@ -73,3 +73,6 @@ app.*.map.json
 # Local media-generation workspace and source artwork
 /generated_media/
 /WhatsApp Image*.jpeg
+
+# Internal planning and handoff notes (kept locally, not published)
+/.internal_docs/

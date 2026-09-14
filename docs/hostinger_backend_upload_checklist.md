@@ -17,7 +17,7 @@ Upload the backend after you have:
 Upload this folder:
 
 ```text
-/home/potato/backup/city_solutions/backend
+backend/
 ```
 
 Best option: the web document root should point to:

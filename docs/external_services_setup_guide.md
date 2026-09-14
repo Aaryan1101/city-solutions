@@ -1,6 +1,6 @@
 # City Solutions External Services Setup Guide
 
-This document lists the external services, credentials and production accounts needed before publishing City Solutions, excluding the delivery-man system.
+This document lists the external services, credentials, and production accounts needed before publishing City Solutions.
 
 ## Summary: What Is Actually Required
 
@@ -193,11 +193,7 @@ Production checks:
 - Logout does not keep sending private notifications to wrong device.
 - Admin Health Check has no failed push jobs.
 
-Detailed guide:
-
-```text
-docs/firebase_payment_setup_guide.md
-```
+Detailed Firebase and Google Cloud instructions are in `docs/FIREBASE_GOOGLE_CLOUD_SETUP.md`.
 
 ## 4. Payment Gateway
 
@@ -263,12 +259,6 @@ Production checks:
 - Test refund.
 - Test payment status in app.
 - Test admin payment reports.
-
-Detailed guide:
-
-```text
-docs/firebase_payment_setup_guide.md
-```
 
 ## 5. SMS / OTP Provider
 

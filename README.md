@@ -50,7 +50,7 @@ Flutter worker app ──┘                    │          SQLite (local demo)
 | Worker mobile app | `lib/main_worker.dart`, `lib/worker/` | Authentication, assignments, navigation, status, and location updates |
 | Backend/API | `backend/app/`, `backend/public/` | REST endpoints, business logic, panels, public pages, and uploads |
 | Database | `backend/database/` | MySQL/SQLite schemas, migrations, and optional demo records |
-| Deployment guides | `docs/` | Firebase, Google Cloud, Hostinger, payments, security, and launch checklists |
+| Deployment guides | `docs/` | Firebase, Google Cloud, Hostinger, and external-service setup |
 
 ## Technology
 
@@ -157,7 +157,7 @@ For a production-style backend deployment:
 4. Make runtime storage and upload directories writable.
 5. Open `/admin/health` and resolve every reported action before launch.
 
-See the [Hostinger deployment checklist](docs/hostinger_backend_upload_checklist.md) and [production security checklist](docs/production_security_checklist.md).
+See the [Hostinger deployment checklist](docs/hostinger_backend_upload_checklist.md) for the complete upload and verification flow.
 
 ## Current Status and Remaining Setup
 
@@ -172,7 +172,7 @@ The application and backend foundations are implemented, but a cloned copy is no
 - Perform device-level end-to-end testing for OTP, notifications, maps, payments, uploads, background location, and every customer/worker workflow.
 - Complete optional production-depth items such as carrier tracking, richer POS hardware support, realtime chat, analytics/crash reporting, and licensed final media.
 
-The complete account and credential checklist is in [External Services Setup](docs/external_services_setup_guide.md). Deferred Mart enhancements are tracked in [Mart Future Tasks](docs/mart_future_tasks.md).
+The complete account and credential checklist is in [External Services Setup](docs/external_services_setup_guide.md).
 
 ## Repository Scope
 
